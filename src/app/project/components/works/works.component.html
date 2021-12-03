@@ -1,0 +1,77 @@
+<section class="works">
+    <div class="container">
+        <!-- <ul>
+            <li data-aos="fade-left">
+                <div class="titles">
+                    <h2>Explore recent works</h2>
+                    <p>We’re constantly refining our product. Adding new features. Working to help your section business
+                        grow.</p>
+                    <div class="custom-btn"><a href="#">See all cases<span></span> <i></i></a></div>
+                </div>
+            </li>
+            <li  data-aos="fade-right">
+                <div class="project-box">
+                    <figure class="project-image reveal-effect masker wow"> <a href="public/images/petworld.jpg"
+                            data-fancybox><img src="https://sevancommunination.com/public/images/petworld.jpg" alt="Image"></a> </figure>
+                    <div class="project-content">
+                        <h3><a href="public/images/petworld.jpg" data-fancybox>Pet World App</a></h3>
+                        <small>Branding — Website</small>
+                    </div>
+                </div>
+            </li>
+            <li  data-aos="fade-left"> 
+                <div class="project-box">
+                    <figure class="project-image reveal-effect masker wow"> <a href="public/images/ajioo.png"
+                            data-fancybox><img src="https://sevancommunination.com/public/images/ajioo.png" alt="Image"></a> </figure>
+                    <div class="project-content">
+                        <h3><a href="public/images/ajioo.png" data-fancybox>Ajioo Website Redesgin</a></h3>
+                        <small>Website — eCommerce</small>
+                    </div>
+                </div>
+            </li>
+            <li  data-aos="fade-right">
+                <div class="project-box">
+                    <figure class="project-image reveal-effect masker wow"> <a href="public/images/onlineEdu.jpg"
+                            data-fancybox><img src="https://sevancommunination.com/public/images/onlineEdu.jpg" alt="Image"></a> </figure>
+                    <div class="project-content">
+                        <h3><a href="public/images/onlineEdu.jpg" data-fancybox>Online Learning</a></h3>
+                        <small>Wordpress — eCommerce</small>
+                    </div>
+                </div>
+            </li>
+            <li  data-aos="fade-left">
+                <div class="project-box">
+                    <figure class="project-image reveal-effect masker wow"> <a href="public/images/flightCase.jpg"
+                            data-fancybox><img src="https://sevancommunination.com/public/images/flight.jpg" alt="Image"> </a></figure>
+                    <div class="project-content">
+                        <h3><a href="public/images/flightCase.jpg" data-fancybox>Flight Booking App</a></h3>
+                        <small>Print — Branding</small>
+                    </div>
+                </div>
+            </li>
+        </ul> -->
+        <ngx-masonry [options]="{ gutter: 10, animations: animations }">
+            <div ngxMasonryItem class="masonry-item">
+                <div class="titles">
+                    <h2>Explore recent works</h2>
+                    <p>We’re constantly refining our product. Adding new features. Working to help your section business
+                        grow.</p>
+                    <div class="custom-btn"><a href="#">See all cases<span></span> <i></i></a></div>
+                    <!-- end custom-btn -->
+                </div>
+            </div>
+            <div ngxMasonryItem class="masonry-item" *ngFor="let item of masonryItems;index as i">
+                <div class="project-box">
+                    <figure class="project-image" [ngClass]="i%2 == 0?'fade-right':'fade-left'"> <a href="public/images/flightCase.jpg"
+                            data-fancybox><img [src]="item.image" alt="Image"> </a></figure>
+                    <div class="project-content">
+                        <h3><a href="public/images/flightCase.jpg" data-fancybox>{{ item.title }}</a></h3>
+                        <small>{{ item.content }}</small>
+                    </div>
+                    <!-- end project-content -->
+                </div>
+           </div>
+        </ngx-masonry>
+    </div>
+    <!-- end container -->
+</section>
