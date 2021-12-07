@@ -6,11 +6,18 @@ const routes: Routes = [
   {
     path: '', component: ProjectComponent, children: [
       {
-        path: '', loadChildren: () => 
+        path: '', loadChildren: () =>
           import('./home/home.module').then((m) => m.HomeModule)
+      },
+      {
+        path:'agency', loadChildren:() => import('./agency/agency.module').then((m) => m.AgencyModule)
       }
+      
     ]
-  }
+  },
+  
+
+
 ];
 
 @NgModule({

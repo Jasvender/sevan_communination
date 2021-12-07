@@ -1,0 +1,75 @@
+<app-header></app-header>
+<app-headline></app-headline>
+<!-- end header -->
+<div class="container">
+    <section class="page-header">
+        <div class="video-bg" >
+            <video src="assets/videos/video.mp4" loop autoplay muted style="width: 100%;"></video>
+        </div>
+        <!-- end video-bg -->
+    </section> 
+<!-- end page-header -->
+<section class="about-intro">
+    <div class="container">
+        <div class="row">
+            <div class="col-12">
+                <h2  style="font-weight:bold; margin-bottom: 2.5rem;">About Agency</h2>
+                <p style="font-weight: 600; margin-bottom: 2.5rem;">Sevan Communination is a full-service digital marketing agency. We’ve been
+                    affording a wide range of services to clients of all enterprises. Our digital marketing services
+                    cover consulting and management options for a variety of online marketing tactics, including search
+                    engine optimization (SEO), PPC (including Social Media Or Google Ads), Amazon listing optimization,
+                    UI/Ux design and consultation, copywriting growth rate optimization (CRO), and more. 
+                </p>
+            </div>
+            <!-- end col-12 -->
+            <div class="col-md-6">
+                <p>
+                    We also offer
+                    proficient web design and development services for all types of companies. Don’t just connect with
+                    any digital marketing agency; work with a company you can believe.</p>
+            </div>
+            <!-- end col-6 -->
+            <div class="col-md-6">
+                <p>
+                    Free files are a powerful motivator for bringing new customers into ThemeForest, and serve to
+                    showcase the quality of the rest of the marketplace. Items used in these campaigns receive.</p>
+            </div>
+            <!-- end col-6 -->
+        </div>
+        <!-- end row -->
+    </div>
+    <!-- end container -->
+</section>
+<!-- end about-intro -->
+<section class="featured-services change-bg" data-color="dark" (scroll)="onWindowScroll($event);">
+    <div class="container">
+        <div class="row">
+            <div class="col-12">
+                <div class="main-services">
+                    <div class="titles">
+                        <h6>PROIT SERVICES</h6>
+                      <p>We’re constantly refining our product. Adding new features.  Working to 
+                        help your business grow.</p>
+                  </div>
+                </div>
+               
+                <!-- end titles -->
+            </div>
+            <!-- end col-12 -->
+            <ng-container *ngFor="let feature of featureImages">
+                <div class="col-lg-3 col-md-6">
+                    <figure class="reveal-effect masker wow"> <img [src]="feature.image" alt="Image">
+                        <figcaption>
+                            <span>{{ feature.number }}</span>
+                            <h4>{{ feature.title }}</h4>
+                        </figcaption>
+                    </figure>
+                </div>
+            </ng-container>
+        </div>
+        <!-- end row -->
+    </div>
+    <!-- end container -->
+</section>
+</div>
+<app-footer></app-footer>
