@@ -7,3 +7,97 @@ body{
 .color-dark{
     background-color: $color-dark;
 }
+.post-sticky {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    position: relative;
+  }
+  .post-sticky .post-image {
+    width: 100%;
+    margin-bottom: 0;
+  }
+  .post-sticky .post-image img {
+    width: 100%;
+    opacity: 0.5;
+  }
+  .post-sticky .post-content {
+    width: 100%;
+    margin: 0;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    color: rgb(0, 0, 0);
+    padding: 50px;
+    padding-right: 30%;
+  }
+  .post-sticky .post-content .avatar {
+    width: 100%;
+    margin-bottom: 20px;
+    font-size: 13px;
+  }
+  .post-sticky .post-content .avatar img {
+    height: 60px;
+    margin-right: 20px;
+    border-radius: 50%;
+  }
+  .post-sticky .post-content .avatar a {
+    text-decoration: underline;
+    color: rgb(0, 0, 0);
+  }
+  .post-sticky .post-content .post-title {
+    display: block;
+    margin-bottom: 15px;
+    font-weight: 700;
+    font-size: 4vw;
+  }
+  .post-sticky .post-content .post-title a {
+    display: block;
+    color: rgb(0, 0, 0);
+  }
+  .post-sticky .post-content .post-date {
+    display: block;
+    margin-bottom: 30px;
+  }
+  .post-sticky .post-content .post-intro {
+    display: block;
+    margin-bottom: 20px;
+    font-size: 18px;
+    line-height: 1.7;
+  }
+  .post-sticky .post-content .post-link {
+    display: inline-block;
+    font-weight: 700;
+    padding-bottom: 8px;
+    position: relative;
+    color: rgb(0, 0, 0);
+  }
+  .post-sticky .post-content .post-link:hover {
+    text-decoration: none;
+  }
+  .post-sticky .post-content .post-link:hover:after {
+    width: 0;
+  }
+  .post-sticky .post-content .post-link:before {
+    content: "";
+    width: 100%;
+    height: 3px;
+    background: rgba(255, 255, 255, 0.2);
+    position: absolute;
+    left: 0;
+    bottom: 0;
+  }
+  .post-sticky .post-content .post-link:after {
+    content: "";
+    width: 100%;
+    height: 3px;
+    background: rgb(0, 0, 0);
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    -webkit-transition: all .25s ease-in-out;
+    -moz-transition: all .25s ease-in-out;
+    -ms-transition: all .25s ease-in-out;
+    -o-transition: all .25s ease-in-out;
+    transition: all .25s ease-in-out;
+  }

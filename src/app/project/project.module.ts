@@ -11,6 +11,7 @@ import { NgxMasonryModule } from 'ngx-masonry';
 import { NgwWowModule } from 'ngx-wow';
 import { ContactComponent } from './components/contact/contact.component';
 import { AgencyComponent } from './agency/agency.component';
+import { BlogComponent } from './blog/blog.component';
 
 
 
@@ -23,7 +24,8 @@ import { AgencyComponent } from './agency/agency.component';
     ProjectComponent,
     WorksComponent,
     ContactComponent,
-    AgencyComponent
+    AgencyComponent,
+    BlogComponent
   ],
   imports: [
     CommonModule,

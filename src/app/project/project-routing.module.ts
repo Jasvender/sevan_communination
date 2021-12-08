@@ -15,9 +15,12 @@ const routes: Routes = [
       // {
       //   path: '**', redirectTo:'home'
       // },
+      // {
+      //   path:'agency', loadChildren:() => 
+      //     import('./agency/agency.module').then((m) => m.AgencyModule)
+      // }
       {
-        path:'', loadChildren:() => 
-          import('./agency/agency.module').then((m) => m.AgencyModule)
+        path:'', loadChildren:() => import('./blog/blog.module').then((m) => m.BlogModule)
       }
       
     ]
