@@ -5,27 +5,26 @@ import { ProjectComponent } from './project.component';
 const routes: Routes = [
   {
     path: '', component: ProjectComponent, children: [
-      // {
-      //   path: 'home', loadChildren: () =>
-      //     import('./home/home.module').then((m) => m.HomeModule)
-      // },
-      // {
-      //   path: '', redirectTo: 'home', pathMatch: 'full'
-      // },
-      // {
-      //   path: '**', redirectTo:'home'
-      // },
-      // {
-      //   path:'agency', loadChildren:() => 
-      //     import('./agency/agency.module').then((m) => m.AgencyModule)
-      // }
       {
-        path:'', loadChildren:() => import('./blog/blog.module').then((m) => m.BlogModule)
-      }
-      
+        path: 'home', loadChildren: () =>
+          import('./home/home.module').then((m) => m.HomeModule)
+      },
+      {
+        path: '', redirectTo: 'home', pathMatch: 'full'
+      },
+      // {
+      //   path: '**', redirectTo: 'home'
+      // },
+      {
+        path: 'agency', loadChildren: () =>
+          import('./agency/agency.module').then((m) => m.AgencyModule)
+      },
+      {
+        path: 'blog', loadChildren: () => import('./blog/blog.module').then((m) => m.BlogModule)
+      },
     ]
   },
-  
+
 
 
 ];
