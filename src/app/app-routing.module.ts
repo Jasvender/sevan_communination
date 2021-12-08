@@ -4,14 +4,11 @@ import { RouterModule, Routes } from '@angular/router';
 
 const routes: Routes = [
   {
-    path: '', redirectTo: 'home', pathMatch: 'full'
+    path: '', loadChildren: () => import('./project/project.module').then((m) => m.ProjectModule)
   },
-  {
-    path: 'home', loadChildren: () => import('./project/project.module').then((m) => m.ProjectModule)
-  },
-  {
-    path:'agency', loadChildren:() => import('./project/agency/agency.module').then((m) => m.AgencyModule)
-  }
+  // {
+  //   path:'agency', loadChildren:() => import('./project/agency/agency.module').then((m) => m.AgencyModule)
+  // }
 ];
 
 @NgModule({

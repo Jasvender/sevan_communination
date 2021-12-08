@@ -5,12 +5,19 @@ import { ProjectComponent } from './project.component';
 const routes: Routes = [
   {
     path: '', component: ProjectComponent, children: [
+      // {
+      //   path: 'home', loadChildren: () =>
+      //     import('./home/home.module').then((m) => m.HomeModule)
+      // },
+      // {
+      //   path: '', redirectTo: 'home', pathMatch: 'full'
+      // },
+      // {
+      //   path: '**', redirectTo:'home'
+      // },
       {
-        path: '', loadChildren: () =>
-          import('./home/home.module').then((m) => m.HomeModule)
-      },
-      {
-        path:'agency', loadChildren:() => import('./agency/agency.module').then((m) => m.AgencyModule)
+        path:'', loadChildren:() => 
+          import('./agency/agency.module').then((m) => m.AgencyModule)
       }
       
     ]
